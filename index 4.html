@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html ng-app="ngSnake">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <title>Stratgy Game</title>
+    <link rel="stylesheet" type="text/css" href="connect4%203.css">
+  </head>
+  <body ng-controller="snakeCtrl"> <strong>Demo Game! <strong> <br>
+        (with the same stratgy game cells dimmsstions (64px.*64px.))
+        <div id="gameContainer">
+          <div>
+            <div class="column" ng-repeat="column in board" ng-click="placeToken($index)">
+              <div ng-style="setStyling(val)" class="circle" ng-repeat="val in column track by $index">&nbsp;</div>
+            </div>
+          </div>
+        </div>
+        <div id="startGame" ng-click="newGame()">New Game</div>
+        Player Turn : {{player === 1 ? 'Red' : 'Black'}}
+        <div class="split right">
+          <div class="centered">
+            <div class="auth-form-body mt-3">
+              <div class="mb-4 pb-3 border-bottom border-gray-light h4 text-normal text-center">
+                <img class="rounded-1" src="http://www.bme.hu/sites/all/themes/foo/logo.png"
+                  alt="BME-GameHub logo" height="60" width="160"> <br>
+                <p> <label for="registration"> <a class="label-link" href="Registration.html"
+                      title="Registration:" target="_blank">Sign up</a> </label>
+                  to <strong>BME-GameHub</strong> <br>
+                  Already member <a href="SignIn.html" target="_blank" title="SignIn"><strong>Sign
+                      in</strong></a> below </p>
+              </div>
+              <div id="signUpIn">
+                <div style="text-align: left;"><label for="login_field">Username
+                    or e-mail address</label></div>
+                <div class="auth-form-body mt-3" style="text-align: left;"> <input
+                    id="login_field" class="form-control input-block" tabindex="1"
+                    name="login" autofocus="autofocus" type="text"> <input class="btn btn-primary btn-block"
+tabindex="3" name="commit" value="Register" data-disable-with="Signing in…" type="submit">
+                  <br>
+                  <label for="password"> Password <a class="label-link" href="PasswordReset.html"
+                      title="PasswordReset_Change" target="_blank">Forgot
+                      password?</a> </label> <br>
+                  <input id="password" class="form-control form-control input-block"
+                    tabindex="2" name="password" type="password"> <input class="btn btn-primary btn-block"
+tabindex="3" name="commit" value="Sign in" data-disable-with="Signing in…" type="submit">
+                </div>
+              </div>
+              <br>
+              <div style="text-align: left;"><a href="Game%20Lobby.html" target="_blank"
+                  title="GameLobby"><strong>Game Lobby:</strong></a></div>
+              <table class="GameLobbyTable">
+                <thead>
+                  <tr>
+                    <th>Game1</th>
+                    <th>Game2</th>
+                    <th>Game3</th>
+                    <th>Game4</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <td colspan="4">
+                      <div class="links"><a href="#">«</a> <a class="active" href="#">1</a>
+                        <a href="#">2</a> <a href="#">3</a> <a href="#">4</a>
+                        <a href="#">»</a></div>
+                    </td>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <td>Player1_1</td>
+                    <td>Player2_1</td>
+                    <td>Player3_1</td>
+                    <td>Player4_1</td>
+                  </tr>
+                  <tr>
+                    <td>Player1_2</td>
+                    <td>Player2_2</td>
+                    <td>Player3_2</td>
+                    <td>Player4_2</td>
+                  </tr>
+                  <tr>
+                    <td>Player1_3</td>
+                    <td>Player2_3</td>
+                    <td>Player3_3</td>
+                    <td>Player4_3</td>
+                  </tr>
+                  <tr>
+                    <td>Player1_4</td>
+                    <td>Player2_4</td>
+                    <td>Player3_4</td>
+                    <td>Player4_4</td>
+                  </tr>
+                </tbody>
+              </table>
+              <strong><br>
+              </strong></div>
+            <div class="auth-form-body mt-3">
+              <div style="text-align: left;"><a href="Main%20Lobby.html" title="Main Lobby:"
+                  target="_blank"><strong>Main Lobby:</strong></a></div>
+              <table class="MainLobbyTable" style="width: 400px;" border="0">
+                <thead>
+                  <tr>
+                    <th style="text-align: left; background-color: #00cccc;">Game</th>
+                    <th style="text-align: left; background-color: #00cccc;">Players</th>
+                    <th style="text-align: left; background-color: #00cccc;">Statue</th>
+                    <th style="text-align: left; background-color: #00cccc;">Options</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Game1</td>
+                    <td>"1/4"</td>
+                    <td>In Lobby</td>
+                    <td>Join</td>
+                  </tr>
+                  <tr>
+                    <td>Game2</td>
+                    <td>"2/4"</td>
+                    <td>In Game</td>
+                    <td>Quit</td>
+                  </tr>
+                  <tr>
+                    <td>Game3</td>
+                    <td>"3/4"</td>
+                    <td>In Lobby</td>
+                    <td>Join</td>
+                  </tr>
+                  <tr>
+                    <td>Game4</td>
+                    <td>"4/4"</td>
+                    <td>In Game</td>
+                    <td><br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p>&nbsp;</p>
+          <script src="angular.min.js"></script>
+          <script src="connect4%204.js"></script> </div>
+      </strong></strong>
+  </body>
+</html>
