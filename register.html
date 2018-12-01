@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://unpkg.com/ionicons@4.4.7/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title></title>
+  </head>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <a class="navbar-brand" href="main.html"><p class="text-light"><b>Home</b></p></a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <div class "col-md-8">
+          <img src="https://i.imgur.com/lez4gdx.png" class="rounded float-right" alt="Responsive image">
+        </div>
+        </ul>
+
+        <!-- The login and register buttons with appropriate items for login-->
+
+        <form class="form-inline my-2 my-lg-0" action="lobby.html" method="post">
+          <input class="form-control mr-sm-2" type="Username" placeholder="Username" aria-label="Password" required>
+            <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" required>
+            <div class="form-inline my-2 my-lg-0">
+                      <div class="col-md-6">
+                        <a href="lobby.html"><button type="submit" id="btnSubmit" class="btn btn-outline-success my-2 my-sm-0">Login</button>
+                      </div>
+                      <div>
+                        <a href="register.html"><button type="button" id="btnSubmit" class="btn btn-outline-success my-2 my-sm-0">Register</button></a>
+                      </div>
+            </div>
+          </form>
+      </div>
+    </nav>
+
+
+
+<!--Body of the page-->
+
+  <div class="card" style="margin: auto; width: 80rem; ">
+
+    <h5 class="card-header">Register</h5>
+    <div class="card-body">
+        <form class="" action="lobby.html" method="post">
+      <div class="">
+        <div class="form-inline" style="padding: 10px">
+              <div class="col-md-6">
+                <h6 class="card-subtitle mb-2 text-muted">E-mail</h6>
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="icon ion-md-mail"></i></span>
+                </div>
+                <input type="email" class="form-control" placeholder="Email" size="50" aria-label="Email" required aria-describedby="basic-addon1">
+              </div>
+            </div>
+        <div class="form-inline" style="padding: 10px">
+              <div class="col-md-6">
+                <h6 class="card-subtitle mb-2 text-muted">Username</h6>
+              </div>
+              <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="icon ion-md-person"></i></span>
+                </div>
+                    <input type="Username" class="form-control" placeholder="Username" size="50" aria-label="Email" required aria-describedby="basic-addon1">
+                </div>
+            </div>
+        <div class="form-inline" style="padding: 10px">
+              <div class="col-md-6">
+                <h6 class="card-subtitle mb-2 text-muted">Password</h6>
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="icon ion-md-unlock"></i> </span>
+                </div>
+                <input type="password" class="form-control" placeholder="Password" size="50" aria-label="password" required aria-describedby="basic-addon1">
+              </div>
+            </div>
+        <div class="form-inline" style="padding: 10px">
+              <div class="col-md-6">
+                <h6 class="card-subtitle mb-2 text-muted">Confirm Password</h6>
+              </div>
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="icon ion-md-lock"></i> </span>
+                  </div>
+                <input type="password" class="form-control" placeholder=" Confirm Password" size="50" aria-label="password" required aria-describedby="basic-addon1">
+              </div>
+        </div>
+
+      </div>
+      <div class="buttons" style="float: right;">
+          <a href="homework_2_success.html"><button type="submit" id="btnSubmit" class="btn btn-outline-primary my-2 my-sm-0">Submit</button>
+          <a href="homework_2.html"><button type="button" id="btnSubmit" class="btn btn-outline-danger my-2 my-sm-0">Cancel</button>
+      </div>
+    </form>
+    </div>
+  </div>
+
+
+  </html>
